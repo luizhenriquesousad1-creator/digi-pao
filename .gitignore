@@ -1,0 +1,31 @@
+# Ambiente Virtural
+
+.venv/
+venv/
+env
+
+# Python
+
+__pycache__/
+*.sqlite3
+*.py[cod]
+
+# Variáveis de ambiente
+
+.env
+
+# Arquivos de mídia e arquivos gerados
+
+media/
+staticfiles/
+
+# IDE
+
+.idea/
+*.iml
+
+# Sistema Operacional
+
+.Ds_Store
+thumbs.db
+
