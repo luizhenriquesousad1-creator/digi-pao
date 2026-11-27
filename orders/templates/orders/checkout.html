@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiPão | Finalizar compra</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Finalizar compra</h1>
+        <a href="{% url 'cart:cart_detail' %}">
+            Voltar ao carrinho
+        </a>
+    </header>
+
+    <main>
+
+        <h2>Resumo do pedido</h2>
+
+        {% for item in cart_items %}
+
+            <article>
+                <h3>{{ item.product.name }}</h3>
+
+                <p>
+                    Quantidade: {{ item.quantity }}
+                    {{ item.product.get_sale_unit_display }}
+                </p>
+
+                <p>
+                    Preço unitário: R$ {{ item.price|floatformat:2 }}
+                </p>
+
+                <p>
+                    Subtotal: R$ {{ item.total_price|floatformat:2 }}
+                </p>
+            </article>
+
+        {% endfor %}
+
+        <h2>Subtotal: R$ {{ subtotal|floatformat:2 }}</h2>
+
+        <h2>Total: R$ {{ total|floatformat:2 }}</h2>
+
+        <h2>Dados da compra</h2>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Confirmar pedido</button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiPão | Login</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>DigiPão</h1>
+
+        <p>Acesse sua conta</p>
+
+    </header>
+
+    <main>
+
+        <h2>Entrar</h2>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <a href="{% url 'accounts:register' %}">
+
+            Criar uma conta
+        </a>
+
+
+    </main>
+
+</body>
+
+</html>

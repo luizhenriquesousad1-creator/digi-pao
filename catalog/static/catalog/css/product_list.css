@@ -1,0 +1,76 @@
+body{
+/*fonte*/
+font-family: Arial, sans-serif;
+/*remove a margem padrão*/
+margin:0;
+/*cor do fundo*/
+background-color: #f4f4f4;
+}
+
+header{
+/*cor de fundo*/
+background-color: #3B241C;
+/*cor do texto*/
+color: #DDD0C8;
+/*espaçamento interno*/
+padding: 20px;
+/*alinhamento do texto*/
+text-align: center;
+}
+
+main{
+/*Largura maxima*/
+max-width: 1100px;
+/*centro-horizontal*/
+margin: 0 auto;
+/*espaçamento interno*/
+padding: 20px;
+}
+
+article{
+/*cor do fundo*/
+background-color: #3B241C;
+/*cor do texto*/
+color: #DDD0C8;
+/*espaçamento interno*/
+padding: 20px;
+/*arredondamento dos cantos*/
+border-radius: 8px;
+/*espaçamento*/
+margin-bottom:20px;
+}
+
+article h3{
+/*tamanho da fonte*/
+font-size: 24px;
+/*espaçamento vertical*/
+margin: 10px 0;
+}
+
+article p{
+/*espaçamento entre paragrafos*/
+margin-bottom: 15px;
+}
+
+article img{
+/*largura da imagem*/
+width: 100%;
+/*altura da imagem*/
+height: 160px;
+/*corte da imagem*/
+object-fit: cover;
+/*arredondamento dos cantos*/
+border-radius: 6px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 650px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
